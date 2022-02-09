@@ -9,12 +9,13 @@
         {% endfor %}
     </div>
 
-    <div id="product-info" class="main-content">
-        <h1>{{ mainProduct.title }}</h1>
-
+    <div id="product-info" class="main-content grid">
+        <div class="valign-center">
+            <h1>{{ mainProduct.title }}</h1>
+        </div>
         <!-- begin info grid -->
         <div class="grid two-columns">
-            <div class="headline">
+            <div class="headline v-align-bottom">
                 <h2>{{ 'product.copy.headline' | t }}</h2>
             </div>
             <div class="description">
