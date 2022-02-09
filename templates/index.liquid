@@ -1,10 +1,10 @@
 {% assign mainProduct = all_products["fitra-activity-band"] %}
 
-<div id="page-index" class="grid two-columns">
-    <div id="product-images">
+<div id="page-index">
+    <div id="product-images" class="sticky-side-image">
         {% for image in mainProduct.images %}
         <div class="single-product-image">
-            <img src="{{ image | img_url: 'large' }}" />
+            <img src="{{ image | img_url: 'x1440' }}" />
         </div>
         {% endfor %}
     </div>
