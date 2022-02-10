@@ -71,6 +71,10 @@ p {
     font-weight: 400;
 }
 
+a {
+    text-decoration: none;
+}
+
 // style guide
 
 h1 {
@@ -202,6 +206,49 @@ button {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+// Global styles
+
+.link-to-cart {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: $gutter-global;
+    color: $color-text;
+}
+
+.link-to-cart .cart-item-count {
+    display: block;
+    font-size: 0px;
+    width: 10px;
+    height: 10px;
+    background: $color-border;
+    border-radius: 100%;
+    margin-top: 4px;
+}
+
+.link-to-cart.cart-filled .cart-item-count {
+    width: 20px;
+    height: 20px;
+    background: $color-accent;
+    font-size: $label-font-size;
+    color: $white;
+    line-height: $line-global;
+    text-align: center;
+    margin-top: 0;
+}
+
+.link-to-cart .cart-text {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: $gutter-global;
+    white-space: nowrap;
+}
+
+.link-to-cart:hover .cart-text {
+    display: block;
 }
 
 // index styles
