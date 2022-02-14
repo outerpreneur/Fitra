@@ -8,6 +8,7 @@ $color-accent: #ff3700;
 $color-text: #555555;
 $color-label: #707070;
 $color-border: #dedede;
+$color-empty-bg: #888888;
 
 $line-global: 20px;
 $gutter-global: $line-global * 2;
@@ -180,6 +181,7 @@ button {
     padding: $gutter-global;
     width: 50%;
     margin-left: auto;
+    grid-template-rows: minmax(max-content, auto) (min-content, max-content);
 }
 
 .valign-center {
@@ -210,7 +212,14 @@ button {
 
 // Global styles
 
-.link-to-cart {
+.cart-item-count {
+    color: $white;
+    text-align: center;
+    border-radius: 100%;
+}
+
+.link-to-cart,
+.link-to-home {
     position: fixed;
     top: 0;
     right: 0;
@@ -258,7 +267,6 @@ button {
 }
 
 #product-info {
-    grid-template-rows: minmax(max-content, auto) (min-content, max-content);
 }
 
 .headline {
@@ -284,4 +292,108 @@ button {
 
 #add-to-cart-form {
     margin-top: -($line-global);
+}
+
+// cart styles
+
+#cart {
+    background: $color-empty-bg;
+    color: $white;
+}
+
+#cart .cart-filled {
+    background: $color-accent;
+}
+
+#cart * {
+    color: inherit;
+}
+
+#cart:not(.cart-filled) #cart-title {
+    position: relative;
+    moz-text-fill-color: transparent;
+    moz-text-stroke-color: $white;
+    moz-text-stroke-width: 2px;
+    webkit-text-fill-color: transparent;
+    webkit-text-stroke-color: $white;
+    webkit-text-stroke-width: 2px;
+}
+
+#cart .cart-item-count {
+    display: block;
+    font-size: 0.08em;
+    border: 2px solid $white;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    position: absolute;
+    top: 2em;
+    right: 0%;
+}
+
+#cart.cart-filled .cart-item-count {
+    border: 0;
+    background: $black;
+}
+
+#cart-empty-lines,
+#back-to-fitra {
+    grid-column: 2;
+}
+
+.empty-line {
+    border-top: 1px solid $white;
+    height: $line-global * 3;
+}
+.empty-line:first-child {
+    margin-top: $line-global;
+}
+
+.empty-line:last-child {
+    margin-bottom: $line-global;
+}
+
+#back-to-fitra {
+    margin-bottom: $line-global;
+}
+
+#cart-lines {
+}
+
+#cart-totals {
+}
+
+th {
+    text-align: left;
+    font-weight: 400;
+    padding-top: $line-global;
+    padding-bottom: $line-global;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+tbody tr {
+    border-top: 1px solid $white;
+}
+
+td {
+    padding-top: $line-global;
+    padding-bottom: $line-global;
+    position: relative;
+}
+
+td:last-child {
+    text-align: right;
+    vertical-align: top;
+}
+
+.remove-line {
+    position: absolute;
+    top: 0;
+    left: 100%;
 }
