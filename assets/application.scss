@@ -449,7 +449,8 @@ td:last-child {
 
 // page 404 styles
 
-#content-404 {
+#content-404 p,
+h1 {
     font-size: 1em;
 }
 
