@@ -1,6 +1,6 @@
 // put your styles here
 
-$main-font: 'rubik', 'helvetica Neue', Arial, Helvetica, sans-serif;
+$main-font: 'helvetica Neue', Arial, Helvetica, sans-serif;
 
 $black: #000;
 $white: #fff;
@@ -448,6 +448,11 @@ td:last-child {
 }
 
 // page 404 styles
+
+#content-404 p,
+h1 {
+    font-size: 1em;
+}
 
 #content-404 a {
     color: $black;
